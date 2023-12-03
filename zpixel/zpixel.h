@@ -16,13 +16,14 @@ typedef enum {
 
 typedef struct {
     int size, luminosite, saturation;
+    float degradation;
     struct { int xCoinSupG, yCoinSupG; } position;
     zpixelType_t type;
     /* x, y et z représentent respectivement r, g et b */
     struct { int x, y, z; } valCouleurs;
 }zpixel_t;
 
-/* initialisation d'un zpixel pour sa création */
+/* allocation de la mémoire pour un zpixel */
 zpixel_t *initNewZPixel();
 
 /* création d'un nouveau zpixel x, y et z représentent respectivement r, g et b */

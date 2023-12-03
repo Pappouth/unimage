@@ -3,7 +3,7 @@ zpixel = zpixel
 glib = `pkg-config --cflags --libs glib-2.0`
 
 prog: main.o $(zpixel)/zpixel.o $(zpixel)/pixelTab.o $(arbre)/arbre.o
-	gcc -g main.o $(zpixel)/zpixel.o $(zpixel)/pixelTab.o $(arbre)/arbre.o -o main -lm
+	gcc -g main.o $(zpixel)/zpixel.o $(zpixel)/pixelTab.o $(arbre)/arbre.o -o main -lm -lglib-2.0
 
 main.o: main.c $(zpixel)/zpixel.h $(arbre)/arbre.h
 	# gcc -c -g main.c -o main.o

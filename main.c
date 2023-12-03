@@ -67,4 +67,16 @@ int main() {
 
     printf("----------\n");
     printf("----------\n");
+    
+    GNode *tree = construireArbreZPixel(0, 0, 3);
+
+    // pixelsImage_t *pi2;
+    // pi2 = initTab(20, 10, 20*3+10);
+    // pi2->pixelColor = calloc(1, pi2->columns * pi2->rowstride);
+
+    int degradationMax = 10;
+
+    parcourirArbre(tree, pi, degradationMax);
+
+    printTab(pi);
 }
